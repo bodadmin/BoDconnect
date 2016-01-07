@@ -9,12 +9,52 @@
             "properties": {
                 "element": {"#": "owner"}
             }
+        },
+        "button": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "enabled": true,
+                "label": "New Task"
+            }
+        },
+        "list": {
+            "prototype": "digit/ui/list.reel",
+            "properties": {
+                "element": {"#": "list"},
+                "contentController": {"@": "rangeController"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            }
+        },
+        "rangeController": {
+            "prototype": "montage/core/range-controller"
+        },
+        "title": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "value": "Title"
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="Main">
+        <h1 data-montage-id="title">
+            <button data-montage-id="button"></button>
+        </h1>
+        <ul data-montage-id="list">
+            <li></li>
+        </ul>
     </div>
 </body>
 </html>
